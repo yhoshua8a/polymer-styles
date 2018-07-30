@@ -1,0 +1,61 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../other-component/other-component.html">
+<link rel="import" href="../style-module.html">
+
+<dom-module id="styles-app">
+  <template>
+    <style include="style-module">
+
+      :host { 
+        font-family: sans-serif; 
+        --prymary-color:aqua;
+        --secondary-color: blue;
+      }
+
+      h2{
+        color:var(--prymary-color, gray);
+      }
+
+      .batman-theme{
+          width: 300px;
+          height:150px;
+          @apply --batman-theme-mixin;
+      }
+
+    </style>
+
+    <h2>Hello [[prop1]]!</h2>
+
+    <div class="batman-theme">
+      <h3>BATMAN</h3>
+    </div>
+
+
+    <other-component></other-component>
+
+    <p class="red">example class red</p>
+    <p class="blue">example class blue</p>
+    <p class="green">example class green</p>
+
+  </template>
+
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class StylesApp extends Polymer.Element {
+      static get is() { return 'styles-app'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'styles-app'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(StylesApp.is, StylesApp);
+  </script>
+</dom-module>

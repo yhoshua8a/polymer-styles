@@ -1,0 +1,35 @@
+<link rel="import" href="../bower_components/shadycss/apply-shim.html">
+<dom-module id="style-module">
+  <template>
+    <style>
+
+     .red{color:red;}
+     .blue{color:blue;}
+     .green{color:green;}
+     
+     .batman-theme{
+        --batman-theme-mixin:{
+          background: black;
+          color: yellow;
+          border: 2px solid aliceblue;
+        };
+      }
+
+      .superman-theme{
+        --superman-theme-mixin:{
+          background: blue;
+          color: red;
+          border:2px solid yellow;    
+        };
+      }
+
+      .greenlantern-theme{
+        --greenlantern-theme-mixin:{
+          background: rgb(10, 129, 10);
+          color: whitesmoke;
+          border:2px solid forestgreen; 
+        };    
+      }
+    </style>
+  </template>
+</dom-module>

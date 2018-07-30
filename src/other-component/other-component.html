@@ -1,0 +1,46 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../final-component/final-component.html">
+
+<link rel="import" href="../style-module.html">
+
+<dom-module id="other-component">
+  <template>
+    <style include="style-module">
+     h2{
+        color:var(--secondary-color, green);
+      }
+
+     .superman-theme{
+          width: 300px;
+          height:150px;
+          @apply --superman-theme-mixin;
+     }
+    </style>
+
+    <h2>Hello other</h2>
+
+    <div class="superman-theme">
+       <h3>SUPERMAN</h3>
+    </div>
+
+    <final-component></final-component>
+
+  </template>
+
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class OtherComponent extends Polymer.Element {
+      static get is() { return 'other-component'; }
+      static get properties() {
+        return {
+
+        };
+      }
+    }
+
+    window.customElements.define(OtherComponent.is, OtherComponent);
+  </script>
+</dom-module>

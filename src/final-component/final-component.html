@@ -1,0 +1,46 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../style-module.html">
+
+<dom-module id="final-component">
+  <template>
+    <style include="style-module">
+
+        .greenlantern-theme{
+          width: 300px;
+          height:150px;
+          @apply --greenlantern-theme-mixin;
+        }
+
+     h2{
+        color:var(--secondary-color, green);
+      }
+ 
+    </style>
+
+    <h2>FINAL COMPONENT</h2>
+    
+
+    <div class="greenlantern-theme">
+       <h3>GREEN LANTERN</h3>
+    </div>
+
+
+  </template>
+
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class FinalComponent extends Polymer.Element {
+      static get is() { return 'final-component'; }
+      static get properties() {
+        return {
+
+        };
+      }
+    }
+
+    window.customElements.define(FinalComponent.is, FinalComponent);
+  </script>
+</dom-module>
